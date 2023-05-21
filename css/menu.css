@@ -1,0 +1,141 @@
+.menu-container {
+    background-color: #050505;
+    padding: 0;
+}
+
+.menu {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    list-style: none;
+    padding: 10px 5px; /* Reduce menu padding */
+    transition: background-color 0.3s;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    font-size: 14px; /* Adjust menu text size */
+}
+
+.menu li:hover {
+    background-color: #515b4f;
+}
+
+.menu li:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #515b4f;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu li:hover:before {
+    opacity: 1;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    z-index: 1000;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #515b4f;
+    /* Set submenu background color */
+    width: 200px;
+}
+
+.submenu li {
+    display: block;
+    padding: 10px 20px;
+}
+
+.submenu li a {
+    color: #fff;
+    /* Set submenu text color */
+    text-decoration: none;
+    font-size: 12px; /* Adjust submenu text size */
+}
+
+.submenu li:hover {
+    background-color: #040404;
+    /* Change background color on hover */
+}
+
+.content {
+    width: 100%;
+    flex: 1;
+    /* Enable vertical scrolling for content */
+    padding-bottom: 100px;
+    /* Add padding at the bottom to accommodate the footer */
+    background-color: #515b4f;
+}
+/* Media Query for Mobile View */
+@media (max-width: 767px) {
+    #menu{
+        display:none;
+    }
+    .menu{
+        display: contents;
+    }
+    .menu li{
+        justify-content: center;
+        text-align: center;
+    }
+  .menu li a {
+    font-size: 10px; /* Further reduce menu text size for mobile */
+  }
+
+  .submenu li a {
+    font-size: 8px; /* Further reduce submenu text size for mobile */
+  }
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* Animation styles for the menu icon */
+.menu-icon.open .menu-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open .menu-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .menu-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+}
+
