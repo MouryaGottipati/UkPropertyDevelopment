@@ -71,7 +71,7 @@ if (screenWidth <= 767) {
             // Perform actions when the class is present
             menuIcon.classList.remove('open');
             menu.style.display = 'none';
-            main.style.marginBottom = 75 + 'px';
+            main.style.marginBottom = 50 + 'px';
 
 
         } else {
@@ -79,7 +79,7 @@ if (screenWidth <= 767) {
             // Perform actions when the class is not present
             menuIcon.classList.toggle('open');
             menu.style.display = 'block';
-            main.style.marginBottom = 150 + 'px';
+            main.style.marginBottom = 140 + 'px';
 
         }
 
