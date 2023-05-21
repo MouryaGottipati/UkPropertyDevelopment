@@ -1,25 +1,38 @@
 footer {
     position: fixed;
-    /* Fix the footer to the bottom of the viewport */
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 300px;
-    padding-top: 100px;
-    overflow-y: auto;
+    max-width: 100%;
+    height: 200px;
+    padding-top: 50px;
     background-color: #333;
     color: #FFF;
-
     text-align: center;
     z-index: -999;
-    /* Ensure the footer is displayed above other elements */
-}
-
-
-footer img {
+  }
+  
+  footer img {
     max-width: 100%;
     height: auto;
     width: 150px;
     height: 50px;
-}
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+    footer {
+      height: auto;
+      display: block;
+      width:100%;
+        font-size: 10px;
+      padding-top: 30px;
+    }
+  
+    footer img {
+      width: 75px;
+      height: 25px;
+    }
+  }
+  

@@ -90,3 +90,14 @@
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
 }
+/* Mobile View */
+@media (max-width: 767px) {
+    .resources h1 {
+      font-size: 18px; /* Further reduce the font size */
+    }
+  
+    .resources hr {
+      width: 70px; /* Further reduce the width */
+      height: 1px; /* Further reduce the height */
+    }
+  }

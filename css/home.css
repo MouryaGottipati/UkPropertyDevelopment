@@ -1,31 +1,30 @@
-.image-carousel {
-
+.home .image-carousel {
     position: relative;
     width: 100%;
     height: 500px;
     overflow: hidden;
-}
-
-.home .image-container {
+  }
+  
+  .home .image-container {
     display: none;
     position: relative;
     width: 100%;
     height: 100%;
-}
-
-.image-container.active {
+  }
+  
+  .home .image-container.active {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.image {
+  }
+  
+  .home .image {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-.text-overlay {
+  }
+  
+  .home .text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,35 +36,36 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     box-sizing: border-box;
-}
-
-.navigation {
+  }
+  
+  .home .navigation {
     position: absolute;
-    bottom: 10px;
+    bottom: 27%;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.arrow {
+    z-index: 1;
+  }
+  
+  .home .arrow {
     font-size: 50px;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-    margin-bottom: 5.5%;
-    z-index: 999;
-}
-
-.circles {
+    margin: 0 10px;
+  }
+  
+  .home .circles {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5%;
-}
-
-.circle {
+    margin-top: 10px;
+    z-index: 1;
+  }
+  
+  .home .circle {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -73,141 +73,36 @@
     margin: 0 5px;
     z-index: 999;
     cursor: pointer;
-}
-
-.active {
+  }
+  
+  .home .active {
     background-color: #fff;
-}
-
-.active.image-container {
+  }
+  
+  .home .active.image-container {
     background-color: transparent;
-}
-
-/* about */
-.about-us {
-    text-align: center;
-    color: #fff;
-
-}
-
-.about-us .image-container {
-    margin-bottom: 20px;
-}
-
-.about-us .image-container img {
-    width: 100%;
-    height: 250px;
-
-}
-
-.box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.box {
-    flex: 1;
-    max-width: 300px;
-    padding: 20px;
-    margin: 0 10px;
-    background-color: #515b4f;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-}
-
-.box-icon {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.box-icon img {
-    width: 60px;
-    height: 60px;
-}
-
-.box-icon-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.box-icon:hover .box-icon-overlay {
-    opacity: 1;
-}
-
-
-.box p {
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: justify;
-
-
-}
-
-
-
-/* Meet the team */
-.meet-the-team-container {
-    width:100%;
-   padding:0%;
-    
-}
-.meet-the-team-container img{
-    width:100%;
-    margin:0%;
-    height:250px;
-}
-
-.meet-the-team-container .heading {
-    text-align: center;
-}
-
-.meet-the-team-container hr {
-    
-    width: 70px;
-    height: 1px;
-    background-color: #fff;
-    border: none;
-    margin: 0 auto 100px auto;
-}
-
-.meet-the-team-container .list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.meet-the-team-container .list-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 18.33%;
-    box-sizing: border-box;
-    padding: 0 10px;
-    height:fit-content;
-}
-
-.meet-the-team-container .list-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-}
-
-.meet-the-team-container .list-item-content {
-    flex-grow: 1;
-    text-align: center;
-}
+  }
+  
+  /* Mobile View */
+  @media (max-width: 767px) {
+    .home .image-carousel {
+      height: 270px;
+    }
+  
+    .home .text-overlay {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    .home .arrow {
+      font-size: 30px;
+      margin: 0 6px;
+    }
+  
+    .home .circle {
+      width: 8px;
+      height: 8px;
+      margin: 0 3px;
+    }
+  }
+  

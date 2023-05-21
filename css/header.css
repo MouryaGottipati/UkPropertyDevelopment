@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 #top-nav-hd {
     background: #515b4f;
@@ -24,6 +25,25 @@ body {
     z-index: 1000;
     background-color: #515b4f;
     overflow: visible !important;
-    margin-bottom: 335px;
+    margin-bottom: 250px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Mobile View */
+@media (max-width: 767px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    #top-nav-hd a img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+  
+    .main {
+      margin-bottom: 140px;
+      padding-bottom:0px;
+    }
+  }
+  

@@ -10,7 +10,7 @@ sections.forEach(section => {
 });
 
 menuItems.forEach(menuItem => {
-  menuItem.addEventListener('click', function() {
+  menuItem.addEventListener('click', function () {
     const sectionId = this.id;
 
     const section = document.querySelector('.' + sectionId);
@@ -28,9 +28,9 @@ menuItems.forEach(menuItem => {
       // Check if the selected menu item has a submenu
       const submenu = this.querySelector('.submenu');
       if (submenu) {
-        
+
         submenuItems.forEach(submenuItem => {
-          submenuItem.addEventListener('click', function(event) {
+          submenuItem.addEventListener('click', function (event) {
             event.stopPropagation();
             const subSectionId = this.id;
             const subSection = document.querySelector('.' + subSectionId);
@@ -50,3 +50,48 @@ menuItems.forEach(menuItem => {
     }
   });
 });
+
+const screenWidth = window.innerWidth;
+if (screenWidth <= 767) {
+  const menuIcon = document.getElementById('menu-icon');
+  const menu = document.getElementById('menu');
+  menuIcon.addEventListener('click', handleMenuIconClick);  
+
+  // Function to handle menu icon click
+  function handleMenuIconClick() {
+    // if (menu.style.getPropertyValue('display').toString().toLowerCase() !== 'none') {
+      
+    // }
+    // else {
+      
+    // }
+    
+    if (menuIcon.classList.contains('open')) {
+      // The 'open' class is present
+      // Perform actions when the class is present
+      menuIcon.classList.remove('open');
+      menu.style.display = 'none';
+      
+    } else {
+      // The 'open' class is not present
+      // Perform actions when the class is not present
+      menuIcon.classList.toggle('open');
+      menu.style.display = 'block';
+      
+    }
+
+  }
+
+  // // Function to handle menu item click
+  // function handleMenuItemClick() {
+  //   menuIcon.classList.remove('open');
+    
+  //   menu.style.display = 'none';
+  // }
+
+  // Attach click event listeners
+ 
+  // menuItems.forEach(menuItem => {
+  //   menuItem.addEventListener('click', handleMenuItemClick);
+  // });
+}
