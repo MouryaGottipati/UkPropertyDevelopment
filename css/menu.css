@@ -99,8 +99,8 @@
     #menu {
         display: none;
     }
-    .main {
-        margin-bottom: 100px;
+    #main {
+        margin-bottom: 95px;
     }
     .menu {
         display: contents;
